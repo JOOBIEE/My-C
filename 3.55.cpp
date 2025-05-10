@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<ctype.h>
 int main()
 {
 	char letter = 0;
@@ -6,7 +7,7 @@ int main()
 	printf("Enter an upper case letter");
 	scanf("%c", &letter);
 	
-	if((letter >='A')&& (letter<='Z'))	//Verify uppercase letter
+	if(isalpha(letter) && isupper(letter))	//Verify uppercase letter
 	{
 		letter >= 'a'-'A';
 		printf("You entered an uppercase%.\n", letter);
